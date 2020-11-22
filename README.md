@@ -1,6 +1,8 @@
 # Weather-Forecast
 
-Simple React Application to display5 Day 3hrs Weather forecast of a city of users choice
+Simple React Application to display5 Day 3hrs Weather forecast of a city of users choice.
+
+> This application is hosted with surge.sh. [Visit elfin-map.surge.sh](http://elfin-map.surge.sh/)
 
 - User can search a city and find weather report
 - Default city is set as Bangalore
