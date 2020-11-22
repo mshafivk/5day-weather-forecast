@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherTile Component should render properly 1`] = `
+<div>
+  <div>
+    <div
+      data-testid="date"
+    >
+      2020-08-04 18:00:00
+    </div>
+  </div>
+  <div>
+    <div>
+      <span>
+        Temperature : 
+      </span>
+      <span>
+        234.23
+      </span>
+    </div>
+    <div>
+      <span>
+        Humidity : 
+      </span>
+      <span>
+        84
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      data-testid="summary"
+    >
+      light rain
+    </div>
+  </div>
+</div>
+`;

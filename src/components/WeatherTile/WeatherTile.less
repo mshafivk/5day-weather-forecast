@@ -1,0 +1,25 @@
+@import '../../common/typography.less';
+@import '../../common/color.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: @bg-color-secondary;
+  color: @fg-color-secondary;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    div {
+      .list-item();
+      flex-grow: 1;
+      border: 1px solid;
+    }
+
+    .summary {
+      .list-item-strong();
+      text-align: center;
+    }
+  }
+}
