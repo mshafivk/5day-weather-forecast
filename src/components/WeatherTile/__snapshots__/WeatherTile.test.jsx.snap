@@ -15,7 +15,8 @@ exports[`WeatherTile Component should render properly 1`] = `
         Temperature : 
       </span>
       <span>
-        234.23
+        -39
+        °C
       </span>
     </div>
     <div>
@@ -24,6 +25,7 @@ exports[`WeatherTile Component should render properly 1`] = `
       </span>
       <span>
         84
+        %
       </span>
     </div>
   </div>

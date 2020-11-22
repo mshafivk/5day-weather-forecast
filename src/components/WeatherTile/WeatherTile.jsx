@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classes from './WeatherTile.less';
 
-const WeatherTile = ({dateTime, temp, humidity, weather}) => (
+export const WeatherTile = ({ dateTime, temp, humidity, weather }) => (
   <div className={classes.container}>
     <div className={classes.row}>
       <div data-testid="date" className={classes.summary}>
@@ -12,11 +12,11 @@ const WeatherTile = ({dateTime, temp, humidity, weather}) => (
     <div className={classes.row}>
       <div>
         <span>Temperature : </span>
-        <span>{temp}</span>
+        <span>{Math.round(temp - 273.15)}°C</span>
       </div>
       <div>
         <span>Humidity : </span>
-        <span>{humidity}</span>
+        <span>{humidity}%</span>
       </div>
     </div>
     <div className={classes.row}>
@@ -32,7 +32,6 @@ WeatherTile.propTypes = {
   temp: PropTypes.number,
   humidity: PropTypes.number,
   weather: PropTypes.arrayOf(
-    PropTypes.shape({main: PropTypes.string, description: PropTypes.string}),
+    PropTypes.shape({ main: PropTypes.string, description: PropTypes.string }),
   ),
 };
-export default WeatherTile;

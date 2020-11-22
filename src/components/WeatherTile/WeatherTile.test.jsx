@@ -1,6 +1,6 @@
 import React from 'react';
-import WeatherTile from './WeatherTile';
-import {shallow} from 'enzyme';
+import { WeatherTile } from './WeatherTile';
+import { shallow } from 'enzyme';
 
 describe('WeatherTile Component', () => {
   it('should render properly', () => {
@@ -8,7 +8,7 @@ describe('WeatherTile Component', () => {
       dateTime: '2020-08-04 18:00:00',
       temp: 234.23,
       humidity: 84,
-      weather: [{main: 'Rain', description: 'light rain'}],
+      weather: [{ main: 'Rain', description: 'light rain' }],
     };
     const wrapper = shallow(<WeatherTile {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -30,7 +30,7 @@ describe('WeatherTile Component', () => {
     const props = {
       temp: 234.23,
       humidity: 84,
-      weather: [{main: 'Rain', description: 'light rain'}],
+      weather: [{ main: 'Rain', description: 'light rain' }],
     };
     const wrapper = shallow(<WeatherTile {...props} />);
     const summary = wrapper.find('[data-testid="summary"]');

@@ -1,5 +1,5 @@
 import React from 'react';
-import WeatherTile from './WeatherTile';
+import {WeatherTile} from './WeatherTile';
 
 export default {
   title: 'WeatherTile',

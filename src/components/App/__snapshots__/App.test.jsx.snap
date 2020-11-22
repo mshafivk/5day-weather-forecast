@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should render properly 1`] = `
+<div>
+  <h2>
+    5 Day Weather Forcast
+  </h2>
+  <div>
+    City :
+     
+    <input
+      onChange={[Function]}
+      type="text"
+      value="BANGALORE"
+    />
+    <button
+      onClick={[Function]}
+    >
+      UPDATE WEATHER
+    </button>
+  </div>
+  <div>
+    <WeatherWidget
+      forecasts={Array []}
+    />
+  </div>
+</div>
+`;

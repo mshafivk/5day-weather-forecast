@@ -20,11 +20,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
-        options: {presets: ['@babel/preset-env']},
+        options: { presets: ['@babel/preset-env'] },
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        use: [{loader: 'file-loader'}],
+        use: [{ loader: 'file-loader' }],
       },
       {
         test: /\.less$/,
@@ -36,7 +36,9 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: {localIdentName: '[local]___[hash:base64:5]'},
+              modules: {
+                localIdentName: '[name]___[local]___[hash:base64:5]',
+              },
             },
           },
           {
@@ -44,13 +46,12 @@ module.exports = {
           },
         ],
       },
-      {test: /\.css$/, use: ['style-loader', 'css-loader']},
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],
   },
-  resolve: {extensions: ['*', '.js', '.jsx']},
+  resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    path: resolveAppPath('dist'),
-    publicPath: '/dist/',
+    publicPath: './',
     filename: 'bundle.js',
   },
   devServer: {
@@ -58,7 +59,7 @@ module.exports = {
     compress: true,
     hot: true,
     host,
-    port: 3000,
+    port: 3001,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
