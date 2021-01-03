@@ -15,14 +15,17 @@ const App = () => {
   const handleCityChange = (evt) =>
     dispatch({ type: SET_CITY, payload: { city: evt.target.value } });
 
-  const loadInformation = async () => {
-    dispatch({ type: SET_LOADING_STATE, payload: { loading: true } });
-    const response = await fetchWeatherInfo(state.city);
-    dispatch({
-      type: SET_FORECAST,
-      payload: { forecasts: response.list || [] },
-    });
-    dispatch({ type: SET_LOADING_STATE, payload: { loading: false } });
+  const loadInformation = () => {
+    const fetchData = async () => {
+      dispatch({ type: SET_LOADING_STATE, payload: { loading: true } });
+      const response = await fetchWeatherInfo(state.city);
+      dispatch({
+        type: SET_FORECAST,
+        payload: { forecasts: response.list || [] },
+      });
+      dispatch({ type: SET_LOADING_STATE, payload: { loading: false } });
+    };
+    fetchData();
   };
 
   useEffect(loadInformation, []);
@@ -37,7 +40,7 @@ const App = () => {
       </div>
       <div className={classes.main}>
         {state.loading ? (
-          <div data-testid="loading-indicator">Loading...</div>
+          <div data-testid="loading-indicator">Loading, Please wait...</div>
         ) : (
           <WeatherWidget forecasts={state.forecasts} />
         )}
