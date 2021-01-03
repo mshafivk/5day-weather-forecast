@@ -40,7 +40,7 @@ Use storybook to verify components independently.
 
 ## TODO
 
-- [ ] Feature - Toggle between temperature scales - Cencisus and farenheit
+- [ ] Feature - Toggle between temperature scales - Celcisus and farenheit
 - [ ] Provide weather related icons ( Sunny, rainy, windy etc)
 - [ ] Rich user interface to highlight today's weather from other dates
 - [ ] Weather Tiles and WeatherWidget to be moved to a re-usabele component library
